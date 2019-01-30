@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="427.0" style="-fx-padding: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rental2.FXMLPaymentDetailsController">
+   <children>
+      <VBox layoutX="16.0" layoutY="48.0" prefHeight="283.0" prefWidth="192.0" spacing="10.0" style="-fx-background-color: Black; -fx-padding: 5;">
+         <children>
+            <Label prefHeight="47.0" prefWidth="191.0" style="-fx-background-color: grey;" text="       Tenant House No." />
+            <Label prefHeight="47.0" prefWidth="191.0" style="-fx-background-color: grey;" text="              Blocks" />
+            <Label prefHeight="47.0" prefWidth="191.0" style="-fx-background-color: grey;" text="              Amount" />
+            <Label prefHeight="47.0" prefWidth="191.0" style="-fx-background-color: grey;" text="       Date of Payment" />
+            <Label prefHeight="47.0" prefWidth="191.0" style="-fx-background-color: grey;" text="       Month Rent Is For" />
+            <Label prefHeight="47.0" prefWidth="191.0" style="-fx-background-color: grey;" text="        Name of Payee" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="215.0" layoutY="48.0" prefHeight="283.0" prefWidth="192.0" spacing="10.0" style="-fx-background-color: Black; -fx-padding: 5;">
+         <children>
+            <ComboBox fx:id="HouseNoBox" onAction="#initializeHouseNoBox" onMouseClicked="#initializeHouseNoBox" prefHeight="47.0" prefWidth="191.0" promptText="Choose from list ">
+               <contextMenu>
+                  <ContextMenu prefHeight="42.0" prefWidth="180.0" />
+               </contextMenu></ComboBox>
+            <TextField fx:id="AmountPaid" onAction="#AmountInput" prefHeight="47.0" prefWidth="191.0" promptText="Enter in Ksh" />
+            <TextField fx:id="DatePaid" onAction="#DateInput" prefHeight="47.0" prefWidth="191.0" promptText="dd-MM-yyyy" />
+            <ComboBox fx:id="MonthPaidBox" onAction="#initializeMonthPaidBox" onMouseClicked="#initializeMonthPaidBox" prefHeight="47.0" prefWidth="191.0" promptText="Choose from list" />
+            <TextField fx:id="TenantName" onAction="#getTenantName" prefHeight="47.0" prefWidth="191.0" promptText="First &amp; Last Names" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="TOP_RIGHT" layoutX="16.0" layoutY="7.0" prefHeight="38.0" prefWidth="391.0">
+         <children>
+            <MenuBar prefHeight="32.0" prefWidth="390.0" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <HBox layoutX="118.0" layoutY="346.0">
+         <children>
+            <Button fx:id="Submit" layoutX="118.0" layoutY="346.0" mnemonicParsing="false" onAction="#TableInsertButton" prefHeight="47.0" prefWidth="191.0" text="Submit">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="90.0" layoutY="401.0">
+         <children>
+            <Button layoutX="90.0" layoutY="401.0" mnemonicParsing="false" onAction="#changescene1Button" prefHeight="47.0" prefWidth="247.0" text="Go Back to Previous Window" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
