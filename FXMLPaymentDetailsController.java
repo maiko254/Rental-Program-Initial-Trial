@@ -104,7 +104,7 @@ public class FXMLPaymentDetailsController implements Initializable {
         String url = "jdbc:sqlite:C:\\Users\\Mike\\Documents\\NetBeansProjects\\SQLite\\PaymentDetails.sqlite";
         String sql1 = "INSERT INTO housedetails(HouseNo,Amount,Date,Month,Name) VALUES(?,?,?,?,?)";
         try (Connection conn = DriverManager.getConnection(url);
-                PreparedStatement pstmt = conn.prepareStatement(sql1)){
+            PreparedStatement pstmt = conn.prepareStatement(sql1)){
             pstmt.setString(1, HouseNo);
             pstmt.setString(2, Amount);
             pstmt.setString(3, DatePaid);
