@@ -69,15 +69,6 @@ public class FXMLDocumentController implements Initializable {
         window.show();
     }
     
-    @FXML
-    public void changescene2Button(ActionEvent event) throws IOException{
-        Parent Repairs = FXMLLoader.load(getClass().getResource("FXMLRepairDetails.fxml"));
-        Scene Repairscene = new Scene(Repairs);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(Repairscene);
-        window.show();
-    }
-    
     
     public void initialize(URL url, ResourceBundle rb) {
         if(rentalModel.isDBConnected()){
